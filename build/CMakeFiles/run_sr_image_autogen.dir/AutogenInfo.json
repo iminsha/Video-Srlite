@@ -1,0 +1,125 @@
+{
+	"BUILD_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/run_sr_image_autogen",
+	"CMAKE_BINARY_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite",
+	"HEADERS" : 
+	[
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing/SuperResolution.h",
+			"MU",
+			"WB5CEFW4JT/moc_SuperResolution.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/LogUtils.h",
+			"MU",
+			"WGYDDRAMTN/moc_LogUtils.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/Logger.h",
+			"MU",
+			"WGYDDRAMTN/moc_Logger.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/run_sr_image_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/run_sr_image_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "HAVE_ONNXRUNTIME" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/DataStruct",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Decoder/include",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/include",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AppController",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AudioProcessor",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AudioProc",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SyncVA",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/PostFilter",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/WorkerPool",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Core",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/onnx/onnxruntime-linux-x64-1.15.1/include",
+		"/usr/include/opencv4",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/run_sr_image_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 16,
+	"PARSE_CACHE_FILE" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/CMakeFiles/run_sr_image_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/CMakeFiles/run_sr_image_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing/SuperResolution.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/src/ModelSession.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/src/PrePostProcessor.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/src/SuperResConfig.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/src/SuperResEngine.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/LogUtils.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/Logger.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/tools/run_sr_image.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [ "/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI" ],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

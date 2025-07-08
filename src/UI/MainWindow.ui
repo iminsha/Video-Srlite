@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1800</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoSR-Lite - AI视频&amp;图片画质增强工具</string>
+  </property>
+  <property name="styleSheet">
+   <string>/* 主窗口样式 */
+QMainWindow {
+    background-color: #f0f2f5;
+}
+
+/* 左侧面板样式 */
+#leftPanel {
+    background-color: #ffffff;
+    border-right: 1px solid #e8eaed;
+}
+
+/* 分组框样式 */
+QGroupBox {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+    border: 2px solid #e8eaed;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #ffffff;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 15px;
+    padding: 0 8px 0 8px;
+    color: #1976d2;
+    background-color: #ffffff;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: #1565c0;
+}
+
+QPushButton:pressed {
+    background-color: #0d47a1;
+}
+
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #666666;
+}
+
+/* 主要按钮样式 */
+#startBtn {
+    background-color: #4caf50;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+#startBtn:hover {
+    background-color: #45a049;
+}
+
+/* 次要按钮样式 */
+#removeFileBtn, #pauseBtn {
+    background-color: #ff5722;
+}
+
+#removeFileBtn:hover, #pauseBtn:hover {
+    background-color: #e64a19;
+}
+
+/* 文件列表样式 */
+QListWidget {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #fafbfc;
+    alternate-background-color: #f5f5f5;
+    selection-background-color: #e3f2fd;
+}
+
+QListWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+QListWidget::item:selected {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+QListWidget::item:hover {
+    background-color: #f5f5f5;
+}
+
+/* 滑块样式 */
+QSlider::groove:horizontal {
+    border: 1px solid #bbb;
+    background: #e0e0e0;
+    height: 6px;
+    border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+    background: #1976d2;
+    border: 1px solid #1976d2;
+    width: 16px;
+    margin: -5px 0;
+    border-radius: 8px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #1565c0;
+}
+
+/* 单选按钮样式 */
+QRadioButton {
+    color: #333333;
+    font-size: 13px;
+}
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QRadioButton::indicator:unchecked {
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+QRadioButton::indicator:checked {
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    background-color: #1976d2;
+}
+
+/* 复选框样式 */
+QCheckBox {
+    color: #333333;
+    font-size: 13px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QCheckBox::indicator:unchecked {
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+    background-color: white;
+}
+
+QCheckBox::indicator:checked {
+    border: 2px solid #1976d2;
+    border-radius: 3px;
+    background-color: #1976d2;
+}
+
+/* 组合框样式 */
+QComboBox {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: white;
+    min-width: 80px;
+}
+
+QComboBox:hover {
+    border: 1px solid #1976d2;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    width: 12px;
+    height: 12px;
+}
+
+/* 预览区域样式 */
+#previewGroupBox {
+    background-color: #ffffff;
+}
+
+#previewToolbar {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+/* 预览标签样式 */
+#originalTitleLabel, #enhancedTitleLabel {
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 4px;
+    padding: 6px;
+    font-weight: bold;
+    color: #1976d2;
+}
+
+/* 滚动区域样式 */
+QScrollArea {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+/* 预览图片标签样式 */
+#originalImageLabel, #enhancedImageLabel {
+    border: 1px dashed #cccccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #666666;
+}
+
+/* 进度条样式 */
+QProgressBar {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+QProgressBar::chunk {
+    background-color: #4caf50;
+    border-radius: 3px;
+}
+
+/* 状态栏样式 */
+QStatusBar {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    color: #495057;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="leftPanel">
+      <property name="minimumSize">
+       <size>
+        <width>360</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>380</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="leftLayout">
+       <property name="leftMargin">
+        <number>12</number>
+       </property>
+       <property name="topMargin">
+        <number>12</number>
+       </property>
+       <property name="rightMargin">
+        <number>12</number>
+       </property>
+       <property name="bottomMargin">
+        <number>12</number>
+       </property>
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="fileGroupBox">
+         <property name="title">
+          <string>📁 媒体文件列表</string>
+         </property>
+         <layout class="QVBoxLayout" name="fileLayout">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="fileButtonsLayout">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="addFileBtn">
+              <property name="text">
+               <string>➕ 添加文件</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="removeFileBtn">
+              <property name="text">
+               <string>🗑️ 移除</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QListWidget" name="fileListWidget">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>220</height>
+             </size>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="settingsGroupBox">
+         <property name="title">
+          <string>⚙️ 处理设置</string>
+         </property>
+         <layout class="QVBoxLayout" name="settingsLayout">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="resolutionLabel">
+            <property name="text">
+             <string>🔍 超分辨率倍数：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="x2RadioBtn">
+            <property name="text">
+             <string>×2 倍 (推荐，速度快)</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="x4RadioBtn">
+            <property name="text">
+             <string>×4 倍 (效果佳，速度慢)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="audioDenoiseCheckBox">
+            <property name="text">
+             <string>🎵 音频降噪</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="denoiseStrengthLabel">
+            <property name="text">
+             <string>🔊 降噪强度：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="denoiseLayout">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <item>
+             <widget class="QSlider" name="denoiseSlider">
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>20</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="denoiseValueLabel">
+              <property name="text">
+               <string>20%</string>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="sharpenLabel">
+            <property name="text">
+             <string>✨ 锐化强度：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="sharpenLayout">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <item>
+             <widget class="QSlider" name="sharpenSlider">
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>50</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="sharpenValueLabel">
+              <property name="text">
+               <string>50%</string>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="controlGroupBox">
+         <property name="title">
+          <string>🎬 处理控制</string>
+         </property>
+         <layout class="QVBoxLayout" name="controlLayout">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="startBtn">
+            <property name="text">
+             <string>🚀 开始处理</string>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>45</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pauseBtn">
+            <property name="text">
+             <string>⏸️ 暂停</string>
+            </property>
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="progressBar">
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="statusLabel">
+            <property name="text">
+             <string>就绪</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="rightPanel">
+      <layout class="QVBoxLayout" name="rightLayout">
+       <property name="leftMargin">
+        <number>12</number>
+       </property>
+       <property name="topMargin">
+        <number>12</number>
+       </property>
+       <property name="rightMargin">
+        <number>12</number>
+       </property>
+       <property name="bottomMargin">
+        <number>12</number>
+       </property>
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="previewGroupBox">
+         <property name="title">
+          <string>🔍 预览对比 - 选择文件即可自动预览</string>
+         </property>
+         <layout class="QVBoxLayout" name="previewLayout">
+          <property name="spacing">
+           <number>12</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="previewToolbar">
+            <layout class="QHBoxLayout" name="previewToolbarLayout">
+             <property name="spacing">
+              <number>12</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="loadPreviewBtn">
+               <property name="text">
+                <string>🔄 刷新预览</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="zoomLabel">
+               <property name="text">
+                <string>🔍 缩放：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="zoomComboBox">
+               <item>
+                <property name="text">
+                 <string>25%</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>50%</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>75%</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>100%</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>150%</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>200%</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>300%</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>适合窗口</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>实际大小</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="compareLabel">
+               <property name="text">
+                <string>📋 对比模式：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="compareModeComboBox">
+               <item>
+                <property name="text">
+                 <string>并排对比</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>滑动对比</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>切换对比</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>同步缩放</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="savePreviewBtn">
+               <property name="text">
+                <string>💾 保存预览</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="previewStackedWidget">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="sideBySidePage">
+             <layout class="QHBoxLayout" name="sideBySideLayout">
+              <property name="spacing">
+               <number>12</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="originalWidget">
+                <layout class="QVBoxLayout" name="originalLayout">
+                 <property name="spacing">
+                  <number>8</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="originalTitleLabel">
+                   <property name="text">
+                    <string>📷 原始画面</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QScrollArea" name="originalScrollArea">
+                   <property name="minimumSize">
+                    <size>
+                     <width>680</width>
+                     <height>680</height>
+                    </size>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="originalScrollAreaWidgetContents">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>678</width>
+                      <height>678</height>
+                     </rect>
+                    </property>
+                    <layout class="QVBoxLayout" name="originalContentLayout">
+                     <item>
+                      <widget class="QLabel" name="originalImageLabel">
+                       <property name="minimumSize">
+                        <size>
+                         <width>660</width>
+                         <height>660</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>🖼️ 暂无预览
+请选择一个图片或视频文件</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="enhancedWidget">
+                <layout class="QVBoxLayout" name="enhancedLayout">
+                 <property name="spacing">
+                  <number>8</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="enhancedTitleLabel">
+                   <property name="text">
+                    <string>✨ 超分辨率后</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QScrollArea" name="enhancedScrollArea">
+                   <property name="minimumSize">
+                    <size>
+                     <width>680</width>
+                     <height>680</height>
+                    </size>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="enhancedScrollAreaWidgetContents">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>678</width>
+                      <height>678</height>
+                     </rect>
+                    </property>
+                    <layout class="QVBoxLayout" name="enhancedContentLayout">
+                     <item>
+                      <widget class="QLabel" name="enhancedImageLabel">
+                       <property name="minimumSize">
+                        <size>
+                         <width>660</width>
+                         <height>660</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>⚡ 等待处理
+超分辨率预览将在此显示</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="sliderComparePage">
+             <layout class="QVBoxLayout" name="sliderCompareLayout">
+              <item>
+               <widget class="QLabel" name="sliderCompareLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>1360</width>
+                  <height>680</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>滑动对比模式 - 开发中</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="compareSlider">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="minimum">
+                 <number>0</number>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="value">
+                 <number>50</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="imageInfoWidget">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="imageInfoLayout">
+             <property name="spacing">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="originalInfoLabel">
+               <property name="text">
+                <string>原图信息：暂无</string>
+               </property>
+               <property name="styleSheet">
+                <string>color: #666666; font-size: 12px;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="enhancedInfoLabel">
+               <property name="text">
+                <string>增强图信息：暂无</string>
+               </property>
+               <property name="styleSheet">
+                <string>color: #666666; font-size: 12px;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="processingTimeLabel">
+               <property name="text">
+                <string>处理时间：--</string>
+               </property>
+               <property name="styleSheet">
+                <string>color: #666666; font-size: 12px;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="infoSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionAddFiles"/>
+    <addaction name="actionClearList"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="actionFitWindow"/>
+    <addaction name="actionActualSize"/>
+    <addaction name="separator"/>
+    <addaction name="actionSideBySide"/>
+    <addaction name="actionSliderCompare"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAddFiles">
+   <property name="text">
+    <string>添加文件...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionClearList">
+   <property name="text">
+    <string>清空列表</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于...</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>使用帮助</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionFitWindow">
+   <property name="text">
+    <string>适合窗口</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+0</string>
+   </property>
+  </action>
+  <action name="actionActualSize">
+   <property name="text">
+    <string>实际大小</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionSideBySide">
+   <property name="text">
+    <string>并排对比</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actionSliderCompare">
+   <property name="text">
+    <string>滑动对比</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

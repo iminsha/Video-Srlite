@@ -1,0 +1,377 @@
+{
+	"BUILD_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/VideoSRLiteGUI_autogen",
+	"CMAKE_BINARY_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite",
+	"HEADERS" : 
+	[
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AppController/AppController.h",
+			"MU",
+			"ZA5ADP36QA/moc_AppController.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AppController/WorkerPool.h",
+			"MU",
+			"ZA5ADP36QA/moc_WorkerPool.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AudioProc/AudioProc.h",
+			"MU",
+			"KATURMN27C/moc_AudioProc.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AudioProcessor/AudioProcessor.h",
+			"MU",
+			"ZWYTCUGN7J/moc_AudioProcessor.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/DataStruct/AudioFrameData.h",
+			"MU",
+			"FDCRDS4HME/moc_AudioFrameData.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/DataStruct/FrameData.h",
+			"MU",
+			"FDCRDS4HME/moc_FrameData.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Decoder/include/AudioDecoder.h",
+			"MU",
+			"QYC3A6RGFJ/moc_AudioDecoder.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Decoder/include/Decoder.h",
+			"MU",
+			"QYC3A6RGFJ/moc_Decoder.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Decoder/include/VideoDecoder.h",
+			"MU",
+			"QYC3A6RGFJ/moc_VideoDecoder.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder/AudioEncoder.h",
+			"MU",
+			"N4BAHDTSTN/moc_AudioEncoder.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder/Encoder.h",
+			"MU",
+			"N4BAHDTSTN/moc_Encoder.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder/Muxer.h",
+			"MU",
+			"N4BAHDTSTN/moc_Muxer.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder/VideoEncoder.h",
+			"MU",
+			"N4BAHDTSTN/moc_VideoEncoder.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/PostFilter/PostFilter.h",
+			"MU",
+			"2GASWDEIIK/moc_PostFilter.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/PostFilter/PostFilterProcessor.h",
+			"MU",
+			"2GASWDEIIK/moc_PostFilterProcessor.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing/AudioDenoiser.h",
+			"MU",
+			"WB5CEFW4JT/moc_AudioDenoiser.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing/PostProcessor.h",
+			"MU",
+			"WB5CEFW4JT/moc_PostProcessor.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing/SuperResolution.h",
+			"MU",
+			"WB5CEFW4JT/moc_SuperResolution.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/include/ModelSession.h",
+			"MU",
+			"AFJHBX6PUZ/moc_ModelSession.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/include/PrePostProcessor.h",
+			"MU",
+			"AFJHBX6PUZ/moc_PrePostProcessor.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/include/SuperResConfig.h",
+			"MU",
+			"AFJHBX6PUZ/moc_SuperResConfig.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/include/SuperResEngine.h",
+			"MU",
+			"AFJHBX6PUZ/moc_SuperResEngine.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SyncVA/AVSyncManager.h",
+			"MU",
+			"BAMX3FTEFL/moc_AVSyncManager.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/FileListWidget.h",
+			"MU",
+			"WAYUIA5GRM/moc_FileListWidget.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/ImagePreviewWidget.h",
+			"MU",
+			"WAYUIA5GRM/moc_ImagePreviewWidget.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/ImageProcessor.h",
+			"MU",
+			"WAYUIA5GRM/moc_ImageProcessor.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/MainWindow.h",
+			"MU",
+			"WAYUIA5GRM/moc_MainWindow.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/SettingsPanel.h",
+			"MU",
+			"WAYUIA5GRM/moc_SettingsPanel.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/FileUtils.h",
+			"MU",
+			"WGYDDRAMTN/moc_FileUtils.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/LogUtils.h",
+			"MU",
+			"WGYDDRAMTN/moc_LogUtils.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/Logger.h",
+			"MU",
+			"WGYDDRAMTN/moc_Logger.cpp"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/WorkerPool/WorkerPool.h",
+			"MU",
+			"HC4UDM2PON/moc_WorkerPool.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/VideoSRLiteGUI_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/VideoSRLiteGUI_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"HAVE_ONNXRUNTIME",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/DataStruct",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Decoder/include",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/include",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AppController",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AudioProcessor",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AudioProc",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SyncVA",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/PostFilter",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/WorkerPool",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Core",
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/onnx/onnxruntime-linux-x64-1.15.1/include",
+		"/usr/include/opencv4",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/VideoSRLiteGUI_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/build/run_sr_image_autogen/mocs_compilation.cpp"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 16,
+	"PARSE_CACHE_FILE" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/CMakeFiles/VideoSRLiteGUI_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/yangzhang/Public/video_lite/VideoSR-Lite/build/CMakeFiles/VideoSRLiteGUI_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AppController/AppController.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AppController/WorkerPool.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AudioProc/AudioProc.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/AudioProcessor/AudioProcessor.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Decoder/src/AudioDecoder.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Decoder/src/Decoder.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Decoder/src/VideoDecoder.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder/AudioEncoder.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder/Encoder.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder/Muxer.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Encoder/VideoEncoder.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/PostFilter/PostFilter.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/PostFilter/PostFilterProcessor.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing/AudioDenoiser.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing/PostProcessor.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Processing/SuperResolution.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/src/ModelSession.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/src/PrePostProcessor.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/src/SuperResConfig.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SuperEigen/src/SuperResEngine.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/SyncVA/AVSyncManager.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/FileListWidget.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/ImagePreviewWidget.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/ImageProcessor.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/MainWindow.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI/SettingsPanel.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/FileUtils.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/LogUtils.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/Utils/Logger.cpp",
+			"MU"
+		],
+		[
+			"/home/yangzhang/Public/video_lite/VideoSR-Lite/src/WorkerPool/WorkerPool.cpp",
+			"MU"
+		],
+		[ "/home/yangzhang/Public/video_lite/VideoSR-Lite/src/main.cpp", "MU" ]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [ "/home/yangzhang/Public/video_lite/VideoSR-Lite/src/UI" ],
+	"UIC_SKIP" : 
+	[
+		"/home/yangzhang/Public/video_lite/VideoSR-Lite/build/run_sr_image_autogen/mocs_compilation.cpp"
+	],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
