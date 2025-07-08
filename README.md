@@ -65,3 +65,6 @@ VideoSR-Lite/
 ---
 
 编译完成后，可执行文件已配置好所有路径，直接使用即可！ 
+=======
+# Video-Srlite
+>>>>>>> origin/main
